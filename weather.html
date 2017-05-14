@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<title>{{page_title}}</title>
+
+		<meta name="description" content="{{page_description}}">
+		<meta name="keywords" content="{{page_keywords}}">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="icon" type="image/png" href="{{app_path}}/images/favicon.png" />
+
+		<link rel="stylesheet" href="{{app_path}}/js/jquery.mobile-1.0/jquery.mobile-1.0.min.css" />
+		<link rel="stylesheet" href="{{app_path}}/js/jquery.mobile-1.0/wthr-srb-blue-orange.min.css" />
+		<link rel="stylesheet" href="{{app_path}}/css/custom.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Voltaire" type="text/css">
+		<script type="text/javascript" src="{{app_path}}/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="{{app_path}}/js/jquery.mobile-1.0/jquery.mobile-1.0.min.js"></script>
+	</head>
+
+
+
+	<body>
+
+		<!-- Start of "Weather" page -->
+		<div data-role="page" id="weather" data-theme="a" style="position: relative;">
+
+			<!-- Start of "Weather" page header -->
+			<div data-role="header" data-theme="a">
+				<h1>{{page_title}}</h1>
+			</div><!-- /header -->
+
+			<!-- Start of "Weather" page content -->
+			<div data-role="content">
+				<div class="logo">
+					<img src="{{app_path}}/{{wthr_img}}" alt="{{wthr_desc}}" width="128" height="128"/>
+					<div id="station_title">{{station_title}}</div>
+					<div id="logo_desc">{{time_date}}</div>
+				</div>
+				<div id="data_content">
+					<div>{{message}}</div><br />
+					<div id="temp">{{temp}}</div>
+					<div>{{press}}</div>
+					<div>{{hum}}</div>
+					<div>{{wspd}}</div>
+					<div>{{wdir}}</div>
+					<div>{{snow}}</div>
+				</div><br /><br />
+				<div>
+					<a href="{{app_path}}/stations" data-role="button" data-icon="arrow-l" data-ajax="false">Pick station</a>
+				</div><br /><br />
+			</div><!-- /content -->
+
+			<!-- Start of "Weather" page footer -->
+			<div data-role="footer" data-theme="c" style="position: absolute; bottom: 0;">
+				<nav data-role="navbar">
+					<ul>
+						<!-- li><a data-icon="refresh" data-role="button" class="ui-btn-active" onClick="window.location.reload()"></a></li -->
+						<li><a data-icon="refresh" data-role="button" onClick="window.location.reload()"></a></li>
+						<li><a href="#about" data-icon="info" data-role="button"></a></li>
+						<li><a href="{{logout_url}}" data-icon="delete" data-role="button" data-ajax="false"></a></li>
+					</ul>
+				</nav>
+			</div><!-- /footer -->
+
+		</div>
+		<!-- /Weather page -->
+
+
+		<!-- Start of "About" page -->
+		<div data-role="page" id="about" data-theme="a" style="position: relative;">
+
+			<!-- Start of "About" page header -->
+			<div data-role="header" data-theme="a">
+				<h1>About {{page_title}} application</h1>
+			</div><!-- /header -->
+
+			<!-- Start of "About" page content -->
+			<div data-role="content">
+				<div class="logo">
+					<img src="{{app_path}}/{{logo_img}}" alt="logo"/>
+					<div id="logo_title">{{logo_title}}</div>
+					<div id="logo_desc">{{logo_desc}}</div>
+				</div>
+				<div id="info_content">
+					<br />
+					Weather Serbia is a web application designed to display current weather conditions for all major cities in Serbia. 
+					Application uses data published by <a href="http://www.hidmet.gov.rs/">Republic Hydrometeorological Service of Serbia</a> on page 
+					<a href="http://www.hidmet.gov.rs/eng/osmotreni/index.rss">http://www.hidmet.gov.rs/eng/osmotreni/index.rss</a>.<br /><br />
+					Weather Serbia is hosted on <a href="http://code.google.com/appengine/">Google App Engine</a> platform and uses <a href="http://jquerymobile.com/">jQuery Mobile</a> JavaScript library. 
+					Application code is written in <a href="http://www.python.org/">Python 2.6.6</a> programming language and generates HTML5 and CSS3 code 
+					(due to use of GAE and jQuery Mobile code is not valid by means of w3 validation services). 
+					Icons theme used except application logo is “<a href="http://azuresol.deviantart.com/gallery/#/d28f800">Sketcy Weather Icons Glow ed.</a>” © 2009 
+					<a href="http://azuresol.deviantart.com/">Matej Mataja</a>, 
+					used under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-Noncommercial-Share Alike 3.0 License</a>.<br /><br />
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+						<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" />
+					</a><br />
+					<span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Weather Serbia</span> 
+					by 
+					<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Ljubomir Kurij (kurijlj@gmail.com)</span> 
+					is licensed under a 
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+				</div>
+			</div><!-- /content -->
+
+			<!-- Start of "About" page footer -->
+			<div data-role="footer" data-theme="c" style="position: absolute; bottom: 0;">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#weather" data-icon="home"  data-role="button" data-direction="reverse"></a></li>
+						<!-- li><a data-icon="info" data-role="button" class="ui-btn-active" onClick="window.location.reload()"></a></li -->
+						<li><a data-icon="info" data-role="button" onClick="window.location.reload()"></a></li>
+						<li><a href="{{logout_url}}" data-icon="delete" data-role="button" data-ajax="false"></a></li>
+					</ul>
+				</nav>
+			</div><!-- /footer -->
+
+		</div>
+		<!-- /About page -->
+
+	</body>
+</html>

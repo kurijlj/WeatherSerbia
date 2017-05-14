@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{page_title}}</title>
+
+		<meta name="description" content="{{page_description}}">
+		<meta name="keywords" content="{{page_keywords}}">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="icon" type="image/png" href="{{app_path}}/images/favicon.png" />
+
+		<link rel="stylesheet" href="{{app_path}}/js/jquery.mobile-1.0/jquery.mobile-1.0.min.css" />
+		<link rel="stylesheet" href="{{app_path}}/js/jquery.mobile-1.0/wthr-srb-blue-orange.min.css" />
+		<link rel="stylesheet" href="{{app_path}}/css/custom.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="{{app_path}}/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="{{app_path}}/js/jquery.mobile-1.0/jquery.mobile-1.0.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page" id="welcome" data-theme="a">
+		<!-- Start of "Welcome" page -->
+			<!-- Start of "Welcome" page header -->
+			<div data-role="header" data-theme="a">
+				<h1>{{page_title}}</h1>
+			</div><!-- /header -->
+			<!-- Start of "Welcome" page content -->
+			<div data-role="content">
+				<div class="logo">
+					<img src="{{app_path}}/{{logo_img}}" alt="logo"/>
+					<div id="logo_title">{{logo_title}}</div>
+					<div id="logo_desc">{{logo_desc}}</div>
+				</div>
+				<div class="info">
+					<div>{{wlcm_message}}</div><br />
+					<div>{{wlcm_error}}</div><br /><br /><br /><br />
+					<div style="text-align: center;">
+							<a href="{{login_url}}" data-role="button" data-ajax="false" data-inline="true" data-theme="a">Log in</a>
+					</div><br />
+				</div>
+			</div><!-- /content -->
+		</div>
+		<!-- /Welcome page -->
+	</body>
+</html>

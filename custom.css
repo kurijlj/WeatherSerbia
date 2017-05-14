@@ -1,0 +1,64 @@
+
+/*
+Design by Ljubomir Kurij
+kurijlj@gmail.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+.page {
+	position: relative;
+	/* background: url(../images/hexblue2w.png) top left repeat; */
+}
+.logo {
+	height: 140px;
+	padding: 0px 0px 15px 0px;
+	border-bottom: 1px solid #aaaaaa;
+	margin: 0px 0px 15px 0px;
+}
+.logo img {
+	float: left;
+	margin: 0px 15px 0px 0px;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+}
+#logo_title {
+	font-family: 'Lobster', cursive;
+	font-weight: bold;
+	color: #f54c00;
+	font-size: 50px;
+	text-shadow: 2px 2px 1px #000;
+}
+#station_title {
+	font-family: 'Lobster', cursive;
+	color: #f54c00;
+	font-size: 32px;
+	text-shadow: 2px 2px 1px #000;
+}
+#logo_desc {
+	font-size: 18px;
+}
+#temp {
+	position: relative;
+	font-family: 'Voltaire', sans-serif;
+	color: #ffffff;
+	/*width: 300px;*/
+	text-align: center;
+	text-shadow: 2px 2px 1px #000;
+	/*text-shadow: 0px 0px 5px #2AA2EE;*/
+	padding: 0px 0px 15px 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 90px;
+}
+#info_content {
+	/*text-align: justify;*/
+}
+#info_content a:link,
+#info_content a:visited,
+#info_content a:hover,
+#info_content a:active {
+	font-weight: normal;
+	color: #0033cc;
+}
